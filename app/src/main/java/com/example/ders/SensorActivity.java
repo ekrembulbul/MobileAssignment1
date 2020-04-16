@@ -82,8 +82,8 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
             }
             Log.d("SensorActivity", String.valueOf(event.timestamp - beginTime));
             if (event.timestamp - beginTime > 5000000000L) {
-                Toast.makeText(this, "Spplication closed!", Toast.LENGTH_LONG).show();
-                System.exit(0);
+                Toast.makeText(this, "Application closed!", Toast.LENGTH_LONG).show();
+                finishAndRemoveTask();
             }
             //Log.d("SensorActivity", "event: " + event.timestamp);
         }

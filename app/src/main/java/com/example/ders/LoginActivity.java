@@ -58,7 +58,8 @@ public class LoginActivity extends AppCompatActivity {
                     name.setText("");
                     password.setText("");
                     if (++loginErrorCount == 3) {
-                        System.exit(0);
+                        Toast.makeText(LoginActivity.this, "Application closed!", Toast.LENGTH_LONG).show();
+                        finishAndRemoveTask();
                     }
                 }
             }

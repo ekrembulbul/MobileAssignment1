@@ -6,193 +6,193 @@
     android:layout_height="match_parent"
     tools:context=".SettingsActivity">
 
-    <TextView
-        android:id="@+id/userNameDisplay"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:gravity="right"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/userNameTW"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/userNameTW"
-        app:layout_constraintTop_toTopOf="@+id/userNameTW" />
+  <TextView
+      android:id="@+id/userNameDisplay"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginEnd="48dp"
+      android:layout_marginRight="48dp"
+      android:gravity="right"
+      android:textColor="@android:color/primary_text_light"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="@+id/userNameTW"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/userNameTW"
+      app:layout_constraintTop_toTopOf="@+id/userNameTW" />
 
-    <TextView
-        android:id="@+id/userNameTW"
+  <TextView
+      android:id="@+id/userNameTW"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginTop="32dp"
+      android:text="@string/name_hint"
+      android:textColor="@android:color/primary_text_light"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/genderTW"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginTop="32dp"
+      android:text="Gender"
+      android:textColor="@android:color/primary_text_light"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/userNameTW" />
+
+  <TextView
+      android:id="@+id/ageTW2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginTop="32dp"
+      android:text="Age"
+      android:textColor="@android:color/primary_text_light"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/genderTW" />
+
+  <TextView
+      android:id="@+id/heightTW"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginTop="32dp"
+      android:text="Height"
+      android:textColor="@android:color/primary_text_light"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/ageTW2" />
+
+  <TextView
+      android:id="@+id/weightTW"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginTop="32dp"
+      android:text="Weight"
+      android:textColor="@android:color/primary_text_light"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/heightTW" />
+
+  <TextView
+      android:id="@+id/languageTW"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginTop="32dp"
+      android:text="Language"
+      android:textColor="@android:color/primary_text_light"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/weightTW" />
+
+  <TextView
+      android:id="@+id/themeTW"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginTop="32dp"
+      android:text="Theme"
+      android:textColor="@android:color/primary_text_light"
+      android:textSize="18sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/languageTW" />
+
+  <RadioGroup
+      android:id="@+id/radioGroup"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginLeft="32dp"
+      android:gravity="right"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="@+id/genderTW"
+      app:layout_constraintEnd_toEndOf="@+id/userNameDisplay"
+      app:layout_constraintStart_toEndOf="@+id/genderTW"
+      app:layout_constraintTop_toTopOf="@+id/genderTW">
+
+    <RadioButton
+        android:id="@+id/genderMale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/name_hint"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Male" />
 
-    <TextView
-        android:id="@+id/genderTW"
+    <RadioButton
+        android:id="@+id/genderFemale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Gender"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userNameTW" />
+        android:text="Female" />
+  </RadioGroup>
 
-    <TextView
-        android:id="@+id/ageTW2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Age"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genderTW" />
+  <EditText
+      android:id="@+id/ageET"
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:gravity="right"
+      android:inputType="numberDecimal"
+      app:layout_constraintBottom_toBottomOf="@+id/ageTW2"
+      app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+      app:layout_constraintTop_toTopOf="@+id/ageTW2" />
 
-    <TextView
-        android:id="@+id/heightTW"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Height"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ageTW2" />
+  <EditText
+      android:id="@+id/heightET"
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:gravity="right"
+      android:inputType="numberDecimal"
+      app:layout_constraintBottom_toBottomOf="@+id/heightTW"
+      app:layout_constraintEnd_toEndOf="@+id/ageET"
+      app:layout_constraintTop_toTopOf="@+id/heightTW" />
 
-    <TextView
-        android:id="@+id/weightTW"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Weight"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heightTW" />
+  <EditText
+      android:id="@+id/weightET"
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:gravity="right"
+      android:inputType="numberDecimal"
+      app:layout_constraintBottom_toBottomOf="@+id/weightTW"
+      app:layout_constraintEnd_toEndOf="@+id/heightET"
+      app:layout_constraintTop_toTopOf="@+id/weightTW" />
 
-    <TextView
-        android:id="@+id/languageTW"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Language"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weightTW" />
+  <Spinner
+      android:id="@+id/languageSpinner"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="32dp"
+      android:layout_marginRight="32dp"
+      android:gravity="right"
+      app:layout_constraintBottom_toBottomOf="@+id/languageTW"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/languageTW" />
 
-    <TextView
-        android:id="@+id/themeTW"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Theme"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/languageTW" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:gravity="right"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/genderTW"
-        app:layout_constraintEnd_toEndOf="@+id/userNameDisplay"
-        app:layout_constraintStart_toEndOf="@+id/genderTW"
-        app:layout_constraintTop_toTopOf="@+id/genderTW">
-
-        <RadioButton
-            android:id="@+id/genderMale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male" />
-
-        <RadioButton
-            android:id="@+id/genderFemale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Female" />
-    </RadioGroup>
-
-    <EditText
-        android:id="@+id/ageET"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="right"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="@+id/ageTW2"
-        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toTopOf="@+id/ageTW2" />
-
-    <EditText
-        android:id="@+id/heightET"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="right"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="@+id/heightTW"
-        app:layout_constraintEnd_toEndOf="@+id/ageET"
-        app:layout_constraintTop_toTopOf="@+id/heightTW" />
-
-    <EditText
-        android:id="@+id/weightET"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="right"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="@+id/weightTW"
-        app:layout_constraintEnd_toEndOf="@+id/heightET"
-        app:layout_constraintTop_toTopOf="@+id/weightTW" />
-
-    <Spinner
-        android:id="@+id/languageSpinner"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:gravity="right"
-        app:layout_constraintBottom_toBottomOf="@+id/languageTW"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/languageTW" />
-
-    <Spinner
-        android:id="@+id/themeSpinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        app:layout_constraintBottom_toBottomOf="@+id/themeTW"
-        app:layout_constraintEnd_toEndOf="@+id/languageSpinner"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/languageSpinner"
-        app:layout_constraintTop_toTopOf="@+id/themeTW"
-        app:layout_constraintVertical_bias="1.0" />
+  <Spinner
+      android:id="@+id/themeSpinner"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:gravity="right"
+      app:layout_constraintBottom_toBottomOf="@+id/themeTW"
+      app:layout_constraintEnd_toEndOf="@+id/languageSpinner"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="@+id/languageSpinner"
+      app:layout_constraintTop_toTopOf="@+id/themeTW"
+      app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

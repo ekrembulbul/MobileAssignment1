@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Ders</string>
+    <string name="name_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="button">Sign in</string>
+    <string name="email_hint">Email</string>
+    <string name="cc_hint">CC</string>
+    <string name="bcc_hint">BCC</string>
+    <string name="subject_hint">Subject</string>
+    <string name="content_hint">Content</string>
+    <string name="send_button">Send</string>
+
+    <string-array name="languages_array">
+        <item>Turkish</item>
+        <item>English</item>
+        <item>Germany</item>
+        <item>Japanese</item>
+    </string-array>
+
+    <string-array name="theme_array">
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+</resources>

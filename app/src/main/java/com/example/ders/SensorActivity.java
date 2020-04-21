@@ -3,6 +3,7 @@ package com.example.ders;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import android.content.Intent;
 
 import android.graphics.drawable.ColorDrawable;
 import android.hardware.Sensor;
@@ -83,7 +84,10 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
             Log.d("SensorActivity", String.valueOf(event.timestamp - beginTime));
             if (event.timestamp - beginTime > 5000000000L) {
                 Toast.makeText(this, "Application closed!", Toast.LENGTH_LONG).show();
-                finishAndRemoveTask();
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("EXIT", true);
+                startActivity(intent);
             }
             //Log.d("SensorActivity", "event: " + event.timestamp);
         }

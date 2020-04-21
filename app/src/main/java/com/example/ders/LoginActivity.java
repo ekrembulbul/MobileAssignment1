@@ -23,6 +23,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        if (getIntent().getBooleanExtra("EXIT", false)) {
+            finish();
+        }
+
         final UsersData usersData = UsersData.getInstance();
 
         name = findViewById(R.id.name_input);
@@ -59,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                     password.setText("");
                     if (++loginErrorCount == 3) {
                         Toast.makeText(LoginActivity.this, "Application closed!", Toast.LENGTH_LONG).show();
-                        finishAndRemoveTask();
+                        finish();
                     }
                 }
             }

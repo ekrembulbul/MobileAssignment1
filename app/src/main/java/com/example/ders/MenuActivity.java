@@ -73,6 +73,24 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        Button download = findViewById(R.id.download);
+        download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, DownloadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button alarm = findViewById(R.id.alarm);
+        alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, AlarmActivity.class);
+                startActivity(intent);
+            }
+        });
+
         if (ContextCompat.checkSelfPermission(MenuActivity.this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(MenuActivity.this, Manifest.permission.RECEIVE_SMS) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(MenuActivity.this, new String[]{Manifest.permission.READ_PHONE_STATE, Manifest.permission.RECEIVE_SMS}, 100);
         } else {

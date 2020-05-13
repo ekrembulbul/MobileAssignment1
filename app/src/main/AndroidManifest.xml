@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -12,13 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".DownloadActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+        <activity android:name=".AlarmActivity" />
+        <activity android:name=".DownloadActivity" />
+
         <receiver
             android:name=".MyReceiver"
             android:enabled="true"
@@ -37,8 +39,7 @@
             android:label="Note" />
         <activity
             android:name=".MenuActivity"
-            android:label="Menu">
-        </activity>
+            android:label="Menu" />
         <activity
             android:name=".SettingsActivity"
             android:label="Settings" />
@@ -50,7 +51,13 @@
             android:label="Send Email" />
         <activity
             android:name=".LoginActivity"
-            android:label="Login"></activity>
+            android:label="Login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

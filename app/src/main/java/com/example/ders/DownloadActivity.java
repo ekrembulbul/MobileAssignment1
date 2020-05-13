@@ -55,7 +55,7 @@ public class DownloadActivity extends AppCompatActivity {
             int sum = 0;
             while (sum < 100) {
                 try {
-                    TimeUnit.SECOND.sleep(1);
+                    TimeUnit.SECONDS.sleep(1);
                 }
                 catch (InterruptedException e) {
                 }
@@ -82,10 +82,10 @@ public class DownloadActivity extends AppCompatActivity {
 
     private void setProgressPercent(Integer value) {
         if (value < 100) {
-            progressBar.setProgress(value, true);
+            progressBar.setProgress(value);
         }
         else {
-            progressBar.setProgress(100, true);
+            progressBar.setProgress(100);
         }
     }
 
